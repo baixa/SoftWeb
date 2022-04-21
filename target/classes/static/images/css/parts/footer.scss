@@ -1,0 +1,16 @@
+@import "../config/bootstrap-config.css";
+
+footer > div > section > a > img {
+  width: 1.5vw;
+}
+
+@media (max-width: 1000px) {
+  footer > div > section > a > img {
+    width: 6vw;
+  }
+
+  footer > div {
+    font-size: 4vw;
+
+  }
+}

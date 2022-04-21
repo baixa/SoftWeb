@@ -1,0 +1,326 @@
+#poster {
+  background-image: linear-gradient(to bottom left, rgba(225, 225, 225, 0.03) 0%,
+          rgba(225, 225, 225, 0.03) 49.9%,
+          rgba(225, 225, 225, 0) 50%,
+          rgba(225, 225, 225, 0) 100%),
+  linear-gradient(to top left,  rgba(225, 225, 225, 0.03) 0%,
+                  rgba(225, 225, 225, 0.03) 49.9%,
+                  rgba(225, 225, 225, 0) 50%,
+                  rgba(225, 225, 225, 0) 100%),
+  linear-gradient(10deg, #00302f, #006361);
+  background-position: top right,bottom right;
+  background-repeat: no-repeat;
+  background-size: 80% 70%,80% 75%,100% auto;
+  padding: 1vw 15vw 2vw 15vw;
+}
+
+#poster > h1 {
+  font-family: "Courier New", monospace;
+  margin-top: 4vw;
+  margin-bottom: 2vw;
+}
+
+#search {
+  width: 60vw;
+  margin-bottom: 3vw;
+}
+
+#search > input {
+  width: 60%;
+  margin-right: 3vw;
+}
+
+#search > button {
+  background-color: $success;
+  color: white;
+}
+
+#search > button:hover {
+  background-color: darken($success, 20%);
+}
+
+#labels {
+  flex-direction: row;
+}
+
+#labels > h3 {
+  font-size: 1vw;
+  width: 50%;
+}
+
+#reverse-row {
+  flex-direction: row-reverse;
+}
+
+.app-list {
+  width: 100%;
+  margin-top: 1vw;
+}
+
+.apps {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.apps-development, .apps-server, .apps-games {
+  display: none;
+}
+
+.app-block {
+  width: 30%;
+  height: 20vh;
+  padding: 1.5vw 1vw;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.app-preview {
+  height: 30%;
+  margin-right: 2vw;
+}
+
+.app-label {
+  font-size: 0.9vw;
+  color: $dark;
+  text-decoration: none;
+}
+
+.app-block:hover{
+  cursor: pointer;
+}
+
+.app-block:hover .app-label {
+  color: $dark;
+  text-decoration: underline;
+}
+
+.app-developer {
+  font-size: 0.95vw;
+  color: lighten($dark, 35%);
+  font-family: "Courier New",monospace;
+  margin-bottom: 1vw;
+}
+
+.app-description {
+  font-size: 0.95vw;
+  font-family: "Courier New", monospace;
+}
+
+.categories-list {
+  margin-top: 1vw;
+  flex-direction: row;
+}
+
+.category {
+  width: 20%;
+}
+
+.category > div {
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
+  height: 1px;
+  width: 100%;
+  border: lighten($dark, 25%) solid 1px;
+}
+
+.category > a {
+  color: lighten($dark, 45%);
+  text-decoration: none;
+}
+
+.category-a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#btn-apps {
+  margin-left: 30vw;
+  margin-top: 2vw;
+  background: none;
+  border: white solid 1px;
+  color: white;
+}
+
+#btn-apps:hover{
+  background: rgba(255, 255, 255, 0.1);
+}
+
+div[id=featured] {
+  border: $danger solid 1px;
+}
+
+a[id=featured] {
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  #poster {
+    padding: 1vw 1vw 2vw 1vw;
+  }
+
+  #poster > h1 {
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  #search {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 10vw;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  #search > input {
+    width: 70%;
+    height: 3vh;
+    font-size: 3vw;
+    margin-right: 1vh;
+    padding-right: 0;
+  }
+
+  #search > button {
+    width: 20%;
+    font-size: 3vw;
+    height: 3vh;
+    margin: 0;
+    background-color: $success;
+    color: white;
+  }
+
+  #search > button:hover {
+    background-color: darken($success, 20%);
+  }
+
+  #labels {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 6vw;
+  }
+
+  #labels > h3 {
+    font-size: 3vw;
+    width: 100%;
+  }
+
+  #reverse-row {
+    flex-direction: row-reverse;
+  }
+
+  .app-list {
+    width: 100%;
+    margin-top: 1vw;
+  }
+
+  .apps{
+    margin-top: 3vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+    padding: 1vh 3vh;
+  }
+
+  .apps-development, .apps-server, .apps-games {
+    display: none;
+  }
+
+  .app-block {
+    width: 100%;
+    padding: 3vh;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3vh;
+  }
+
+  .app-preview {
+    height: 40%;
+    margin-right: 5vw;
+  }
+
+  .app-label {
+    font-size: 5vw;
+    color: $dark;
+    text-decoration: none;
+  }
+
+  .app-block:hover{
+    cursor: pointer;
+  }
+
+  .app-block:hover .app-label {
+    color: $dark;
+    text-decoration: underline;
+  }
+
+  .app-developer {
+    font-size: 4vw;
+    color: lighten($dark, 35%);
+    font-family: "Courier New",monospace;
+    margin-bottom: 1vh;
+  }
+
+  .app-description {
+    margin-top: 1vh;
+    font-size: 4vw;
+    font-family: "Courier New", monospace;
+  }
+
+  .categories-list {
+    margin-top: 1vw;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    width: 100%;
+    padding: 0 3vh 1vh 3vh;
+  }
+
+  .category {
+    width: 100%;
+    margin-bottom: 2vw;
+  }
+
+  .category > div {
+    margin-top: 1vw;
+    margin-bottom: 0.5vw;
+    height: 1px;
+    width: 100%;
+    border: lighten($dark, 25%) solid 2px;
+  }
+
+  .category > a {
+    color: lighten($dark, 45%);
+    font-size: 3vh;
+    text-decoration: none;
+  }
+
+  .category-a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  #btn-apps {
+    margin: 1vh 35%;
+    width: 30%;
+    background: none;
+    border: white solid 1px;
+    color: white;
+    font-size: 3vw;
+  }
+
+  div[id=featured] {
+    border: $danger solid 2px;
+  }
+
+  a[id=featured] {
+    color: white;
+  }
+}

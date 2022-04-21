@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home-css/home.css}">
+    <script th:src="@{/js/home.js}"></script>
+</head>
+<body>
+    <div class="bg-dark" id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark"  style="height: 20vw; max-height: 75px; padding: 0;">
+            <a class="navbar-brand text-white" href="#" style=""><img th:src="@{/images/logo.png}" style="height: 90%;" alt="">SoftWeb</a>
+            <button class="navbar-toggler bg-danger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse  bg-dark" id="navbarSupportedContent" style="height: 100%; padding-top: 0.7vw;">
+                <ul class="navbar-nav mr-auto" style="height: 100%;">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Blog</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0" id="dev-form">
+                    <a class="nav-link text-white" href="#" style="height: 100%; padding: 0; margin-bottom: -1vw;"><img th:src="@{/images/user.png}" style="height: 100%; max-height: 30px; margin-right: 1vw;">Developer account</a>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div id="poster">
+        <h1 class="text-white">The app store for Windows</h1>
+        <form class="form-inline" id="search">
+            <input class="form-control" type="search" placeholder="Search applications" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="d-flex" id="labels">
+            <h3 class="text-white">Some applications you may like</h3>
+            <h3 class="d-flex text-white" id="reverse-row">View all applications ></h3>
+        </div>
+        <div class="d-flex flex-row app-list">
+            <div class="apps-featured text-dark apps">
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/12/spotify-linux-256.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">Spotify</a>
+                        <h2 class="app-developer">Spotify</h2>
+                        <h2 class="app-description">Music for everyone</h2>
+                    </div>
+                </div>
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/07/gimp.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">GNU Image Manipulation Program</a>
+                        <h2 class="app-developer">SoftWeb Crafts</h2>
+                        <h2 class="app-description">GIMP</h2>
+                    </div>
+                </div>
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2020/08/512x512_JxZHjBO.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">1password</a>
+                        <h2 class="app-developer">1Password</h2>
+                        <h2 class="app-description">Secured password manager</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="apps-development apps">
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2020/03/512x512_4JGJ8f7.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">Beekeper Studio</a>
+                        <h2 class="app-developer">Beekeper Studio</h2>
+                        <h2 class="app-description">Open Source SQL Editor</h2>
+                    </div>
+                </div>
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2018/03/sublime-text.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">Sublime Text</a>
+                        <h2 class="app-developer">SoftWeb Crafts</h2>
+                        <h2 class="app-description">Text Editor</h2>
+                    </div>
+                </div>
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/11/PyCharmCore256.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">PyCharm Community</a>
+                        <h2 class="app-developer">JetBrains</h2>
+                        <h2 class="app-description">IDEA for Python</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="apps-games apps">
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/12/icon256_f9302jP.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">0ad</a>
+                        <h2 class="app-developer">Wildfire Games</h2>
+                        <h2 class="app-description">Strategy</h2>
+                    </div>
+                </div>
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2018/01/supertuxkart-256.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">SuperTuxKart</a>
+                        <h2 class="app-developer">Daniel Llewellyn</h2>
+                        <h2 class="app-description">Arcade racer</h2>
+                    </div>
+                </div>
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/11/mars-256_etORXwv.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">M.A.R.S.</a>
+                        <h2 class="app-developer">Daniel Llewellyn</h2>
+                        <h2 class="app-description">Space shooter</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="apps-server apps">
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2018/11/b8a85a31-MicroK8s_SnapStore_icon.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">microk8s</a>
+                        <h2 class="app-developer">Canonical</h2>
+                        <h2 class="app-description">Kubernetes</h2>
+                    </div>
+                </div>
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2016/06/icon.svg_1.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">nextcloud</a>
+                        <h2 class="app-developer">Nextcloud</h2>
+                        <h2 class="app-description">Cloud for your data</h2>
+                    </div>
+                </div>
+                <div class="app-block">
+                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/06/-NNP9RC0.png">
+                    <div class="block-right">
+                        <a href="#" class="app-label">wekan</a>
+                        <h2 class="app-developer">Lauri Ojansivu</h2>
+                        <h2 class="app-description">kanban</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between categories-list">
+            <div class="category">
+                <div id="featured" class="apps-featured-line line"></div>
+                <a id="featured" class="apps-featured-a category-a" href="#" onclick="changeCategory('apps-featured')" onmouseover="changeColor(this)" onmouseout="changeColor(this)">Featured</a>
+            </div>
+            <div class="category">
+                <div id="dev" class="apps-development-line line"></div>
+                <a id="dev" class="apps-development-a category-a" href="#" onclick="changeCategory('apps-development')" onmouseover="changeColor(this)" onmouseout="changeColor(this)">Development</a>
+            </div>
+            <div class="category">
+                <div id="game" class="apps-games-line line"></div>
+                <a id="games" class="apps-games-a category-a" href="#" onclick="changeCategory('apps-games')" onmouseover="changeColor(this)" onmouseout="changeColor(this)">Games</a>
+            </div>
+            <div class="category">
+                <div id="server" class="apps-server-line line"></div>
+                <a id="server" class="apps-server-a category-a" href="#" onclick="changeCategory('apps-server')" onmouseover="changeColor(this)" onmouseout="changeColor(this)">Server</a>
+            </div>
+        </div>
+        <button id="btn-apps" class="btn btn-outline-secondary" type="submit">Browse all apps</button>
+    </div>
+    <div id="publishers-div">
+        <h3>OFFICIAL PUBLISHERS</h3>
+        <div class="d-flex publishers-columns">
+            <div class="d-flex publishers-column margin-right">
+                <div class="publisher">
+                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/aae93857-logo-mozilla--snapcraft-homepage.svg" alt=""/> </a>
+                </div>
+                <div class="publisher">
+                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/6958a93e-kde-logo-snapcraft-homepage.svg" alt=""/> </a>
+                </div>
+                <div class="publisher">
+                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/55f6dae7-logo-jetbrains--snapcraft-homepage.svg" alt=""/> </a>
+                </div>
+            </div>
+            <div class="d-flex publishers-column">
+                <div class="publisher">
+                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/63d5fd3f-logo-spotify--snapcraft-homepage.svg" alt=""/> </a>
+                </div>
+                <div class="publisher">
+                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/2d54fa27-logo-google--snapcraft-homepage.svg" alt=""/> </a>
+                </div>
+                <div class="publisher">
+                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/7b03d4b8-logo-microsoft--snapcraft-homepage.svg" alt=""/> </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div id="news-div" class="d-flex">
+        <h1>Latest news from <a href="#">our blog ›</a></h1>
+        <div class="d-flex news-line">
+            <div class="d-flex news">
+                <h3><a class="news-link" href="#">What is new in SoftWeb 1.0.0?</a></h3>
+                <span> 07 March 2022 – Jane B.</span>
+            </div>
+            <div class="d-flex news">
+                <h3><a class="news-link" href="#">What is new in SoftWeb 1.0.0?</a></h3>
+                <span> 07 March 2022 – Jane B.</span>
+            </div>
+            <div class="d-flex news">
+                <h3><a class="news-link" href="#">What is new in SoftWeb 1.0.0?</a></h3>
+                <span> 07 March 2022 – Jane B.</span>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4 pb-0">
+            <section class="mb-4">
+                <a class="btn btn-outline-dark btn-floating m-1 mr-3" href="#!" role="button"
+                ><img th:src="@{/images/facebook.png}"></a>
+
+                <a class="btn btn-outline-dark btn-floating m-1 mr-3" href="#!" role="button"
+                ><img th:src="@{/images/instagram.png}"></a>
+
+                <a class="btn btn-outline-dark btn-floating m-1 mr-3" href="#!" role="button"
+                ><img th:src="@{/images/twitter.png}"></a>
+
+                <a class="btn btn-outline-dark btn-floating m-1 mr-3" href="#!" role="button"
+                ><img th:src="@{/images/github.png}"></a>
+            </section>
+        </div>
+
+        <div class="text-center p-3" style="background-color: #191919;">
+            © 2022 Copyright:
+            <a class="text-white" href="https://github.com/baixa" style="text-decoration: none;">@baixa</a>
+        </div>
+    </footer>
+</body>
+</html>
