@@ -14,13 +14,16 @@ import java.util.List;
 @Entity
 @Table(name = "applications")
 @AllArgsConstructor
-public class Application {
+public class Application{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "Name")
     private String name;
+
+    @Column(name = "Short_description")
+    private String shortDescription;
 
     @Column(name = "Description")
     private String description;
@@ -35,7 +38,7 @@ public class Application {
     private String license;
 
     @ManyToOne
-    @JoinColumn(name = "Developer_ID", nullable = false)
+    @JoinColumn(name = "Developer_ID")
     private Developer developer;
 
     @OneToMany(mappedBy = "application")

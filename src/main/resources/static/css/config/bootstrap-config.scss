@@ -1,4 +1,4 @@
-@import "../../../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
+@import "../../node/node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
 $primary: #075d5b;
 $secondary: #fff;
 $dark: #262626;
@@ -6,7 +6,7 @@ $info: #2266cc;
 $danger: #e95420;
 $success: #0e8420;
 
-@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node/node_modules/bootstrap/scss/bootstrap";
 body {
   font-family: Roboto, serif;
 }

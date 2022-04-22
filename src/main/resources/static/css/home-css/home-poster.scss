@@ -1,3 +1,4 @@
+@import "../config/bootstrap-config";
 #poster {
   background-image: linear-gradient(to bottom left, rgba(225, 225, 225, 0.03) 0%,
           rgba(225, 225, 225, 0.03) 49.9%,
@@ -78,7 +79,8 @@
 }
 
 .app-preview {
-  height: 30%;
+  height: 50px;
+  width: 50px;
   margin-right: 2vw;
 }
 

@@ -52,108 +52,108 @@
         <div class="d-flex flex-row app-list">
             <div class="apps-featured text-dark apps">
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/12/spotify-linux-256.png">
+                    <img class="app-preview" th:src="*{featuredApp1.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">Spotify</a>
-                        <h2 class="app-developer">Spotify</h2>
-                        <h2 class="app-description">Music for everyone</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp1.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp1.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp1.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/07/gimp.png">
+                    <img class="app-preview" th:src="*{featuredApp2.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">GNU Image Manipulation Program</a>
-                        <h2 class="app-developer">SoftWeb Crafts</h2>
-                        <h2 class="app-description">GIMP</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp2.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp2.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp2.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2020/08/512x512_JxZHjBO.png">
+                    <img class="app-preview" th:src="*{featuredApp3.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">1password</a>
-                        <h2 class="app-developer">1Password</h2>
-                        <h2 class="app-description">Secured password manager</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp3.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp3.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp3.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
             </div>
 
             <div class="apps-development apps">
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2020/03/512x512_4JGJ8f7.png">
+                    <img class="app-preview" th:src="*{featuredApp4.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">Beekeper Studio</a>
-                        <h2 class="app-developer">Beekeper Studio</h2>
-                        <h2 class="app-description">Open Source SQL Editor</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp4.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp4.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp4.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2018/03/sublime-text.png">
+                    <img class="app-preview" th:src="*{featuredApp5.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">Sublime Text</a>
-                        <h2 class="app-developer">SoftWeb Crafts</h2>
-                        <h2 class="app-description">Text Editor</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp5.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp5.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp5.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/11/PyCharmCore256.png">
+                    <img class="app-preview" th:src="*{featuredApp6.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">PyCharm Community</a>
-                        <h2 class="app-developer">JetBrains</h2>
-                        <h2 class="app-description">IDEA for Python</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp6.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp6.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp6.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
             </div>
 
             <div class="apps-games apps">
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/12/icon256_f9302jP.png">
+                    <img class="app-preview" th:src="*{featuredApp7.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">0ad</a>
-                        <h2 class="app-developer">Wildfire Games</h2>
-                        <h2 class="app-description">Strategy</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp7.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp7.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp7.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2018/01/supertuxkart-256.png">
+                    <img class="app-preview" th:src="*{featuredApp8.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">SuperTuxKart</a>
-                        <h2 class="app-developer">Daniel Llewellyn</h2>
-                        <h2 class="app-description">Arcade racer</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp8.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp8.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp8.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/11/mars-256_etORXwv.png">
+                    <img class="app-preview" th:src="*{featuredApp9.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">M.A.R.S.</a>
-                        <h2 class="app-developer">Daniel Llewellyn</h2>
-                        <h2 class="app-description">Space shooter</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp9.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp9.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp9.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
             </div>
 
             <div class="apps-server apps">
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2018/11/b8a85a31-MicroK8s_SnapStore_icon.png">
+                    <img class="app-preview" th:src="*{featuredApp10.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">microk8s</a>
-                        <h2 class="app-developer">Canonical</h2>
-                        <h2 class="app-description">Kubernetes</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp10.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp10.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp10.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2016/06/icon.svg_1.png">
+                    <img class="app-preview" th:src="*{featuredApp11.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">nextcloud</a>
-                        <h2 class="app-developer">Nextcloud</h2>
-                        <h2 class="app-description">Cloud for your data</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp11.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp11.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp11.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
                 <div class="app-block">
-                    <img class="app-preview" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_48,h_48/https://dashboard.snapcraft.io/site_media/appmedia/2017/06/-NNP9RC0.png">
+                    <img class="app-preview" th:src="*{featuredApp12.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label">wekan</a>
-                        <h2 class="app-developer">Lauri Ojansivu</h2>
-                        <h2 class="app-description">kanban</h2>
+                        <a href="#" class="app-label" th:text="*{featuredApp12.name}">Spotify</a>
+                        <h2 class="app-developer" th:text="*{featuredApp12.getDeveloper().getUsername()}">Spotify</h2>
+                        <h2 class="app-description" th:text="*{featuredApp12.getShortDescription()}">Music for everyone</h2>
                     </div>
                 </div>
             </div>
@@ -165,15 +165,15 @@
             </div>
             <div class="category">
                 <div id="dev" class="apps-development-line line"></div>
-                <a id="dev" class="apps-development-a category-a" href="#" onclick="changeCategory('apps-development')" onmouseover="changeColor(this)" onmouseout="changeColor(this)">Development</a>
+                <a id="dev" class="apps-development-a category-a" href="#" onclick="changeCategory('apps-development')" onmouseover="changeColor(this)" onmouseout="changeColor(this)">Stable</a>
             </div>
             <div class="category">
                 <div id="game" class="apps-games-line line"></div>
-                <a id="games" class="apps-games-a category-a" href="#" onclick="changeCategory('apps-games')" onmouseover="changeColor(this)" onmouseout="changeColor(this)">Games</a>
+                <a id="games" class="apps-games-a category-a" href="#" onclick="changeCategory('apps-games')" onmouseover="changeColor(this)" onmouseout="changeColor(this)">SWUR</a>
             </div>
             <div class="category">
                 <div id="server" class="apps-server-line line"></div>
-                <a id="server" class="apps-server-a category-a" href="#" onclick="changeCategory('apps-server')" onmouseover="changeColor(this)" onmouseout="changeColor(this)">Server</a>
+                <a id="server" class="apps-server-a category-a" href="#" onclick="changeCategory('apps-server')" onmouseover="changeColor(this)" onmouseout="changeColor(this)">Official</a>
             </div>
         </div>
         <button id="btn-apps" class="btn btn-outline-secondary" type="submit">Browse all apps</button>
@@ -183,24 +183,24 @@
         <div class="d-flex publishers-columns">
             <div class="d-flex publishers-column margin-right">
                 <div class="publisher">
-                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/aae93857-logo-mozilla--snapcraft-homepage.svg" alt=""/> </a>
+                    <a class="publisher-link" href="https://www.mozilla.org/ru/"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/aae93857-logo-mozilla--snapcraft-homepage.svg" alt="Mozilla"/> </a>
                 </div>
                 <div class="publisher">
-                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/6958a93e-kde-logo-snapcraft-homepage.svg" alt=""/> </a>
+                    <a class="publisher-link" href="https://kde.org/ru/"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/6958a93e-kde-logo-snapcraft-homepage.svg" alt="KDE"/> </a>
                 </div>
                 <div class="publisher">
-                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/55f6dae7-logo-jetbrains--snapcraft-homepage.svg" alt=""/> </a>
+                    <a class="publisher-link" href="https://www.jetbrains.com/"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/55f6dae7-logo-jetbrains--snapcraft-homepage.svg" alt="JetBrains"/> </a>
                 </div>
             </div>
             <div class="d-flex publishers-column">
                 <div class="publisher">
-                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/63d5fd3f-logo-spotify--snapcraft-homepage.svg" alt=""/> </a>
+                    <a class="publisher-link" href="https://www.spotify.com/ru-ru/why-not-available/"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/63d5fd3f-logo-spotify--snapcraft-homepage.svg" alt="Spotify"/> </a>
                 </div>
                 <div class="publisher">
-                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/2d54fa27-logo-google--snapcraft-homepage.svg" alt=""/> </a>
+                    <a class="publisher-link" href="https://www.google.com/"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/2d54fa27-logo-google--snapcraft-homepage.svg" alt="Google"/> </a>
                 </div>
                 <div class="publisher">
-                    <a class="publisher-link" href="#"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/7b03d4b8-logo-microsoft--snapcraft-homepage.svg" alt=""/> </a>
+                    <a class="publisher-link" href="https://www.microsoft.com/ru-ru"><img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_146,h_145/https://assets.ubuntu.com/v1/7b03d4b8-logo-microsoft--snapcraft-homepage.svg" alt="Microsoft"/> </a>
                 </div>
             </div>
         </div>

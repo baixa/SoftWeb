@@ -14,19 +14,20 @@ import java.util.List;
 public class Developer {
 
     @Id
+    @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "Username")
+    @Column(name = "username")
     private String username;
 
     @Column(name = "FullName")
     private String fullName;
 
-    @Column(name = "Password")
+    @Column(name = "password")
     private String password;
 
-    @Column(name = "Is_Admin")
+    @Column(name = "is_Admin")
     private boolean isAdmin;
 
     @OneToMany(mappedBy = "developer")
