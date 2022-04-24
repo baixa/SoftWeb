@@ -49,7 +49,7 @@
         </div>
     	<div class="d-flex flex-row justify-content-between" id="label-poster-right">
             <p class="d-flex flex-row justify-content-center" id="version">latest/stable: <span th:text="*{app.getApplicationsSystems().get(0).getVersion()}">4.3.1</span></p>
-    		<button class="btn btn-outline-success" type="submit">Install</button>
+            <a id="load-button" th:href="*{app.getApplicationsSystems().get(0).getInstallerPath()}"><button class="btn btn-outline-success" type="submit">Download</button></a>
     	</div>
     </div>
     <div>
@@ -62,9 +62,6 @@
             </div>
             <div class="boxX">
                 <img th:src="*{app.getImages().get(2).getPath()}">
-            </div>
-            <div class="boxX">
-                <img src="https://source.unsplash.com/1000x806">
             </div>
         </div>
     </div>
