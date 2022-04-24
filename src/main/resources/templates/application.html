@@ -40,7 +40,7 @@
         </nav>
     </div>
     <div class="d-flex flex-row justify-content-between" id="label-poster">
-    	<div class="d-flex flex-row justify-content-between">
+    	<div class="d-flex flex-row justify-content-between" id="label-poster-left">
     		<img class="app-preview" th:src="*{app.logoPath}">
             <div>
                 <h3 class="app-label" th:text="*{app.getName()}" id="labelApp">beekeper-studio</h3>
@@ -51,6 +51,22 @@
             <p class="d-flex flex-row justify-content-center" id="version">latest/stable: <span th:text="*{app.getApplicationsSystems().get(0).getVersion()}">4.3.1</span></p>
     		<button class="btn btn-outline-success" type="submit">Install</button>
     	</div>
+    </div>
+    <div>
+        <div class="containerX">
+            <div class="boxX">
+                <img th:src="*{app.getImages().get(0).getPath()}">
+            </div>
+            <div class="boxX">
+                <img th:src="*{app.getImages().get(1).getPath()}">
+            </div>
+            <div class="boxX">
+                <img th:src="*{app.getImages().get(2).getPath()}">
+            </div>
+            <div class="boxX">
+                <img src="https://source.unsplash.com/1000x806">
+            </div>
+        </div>
     </div>
 
 
