@@ -1,0 +1,37 @@
+@import "../config/bootstrap-config";
+
+#label-poster {
+  background-color: #e9f1f1;
+  padding: 1vw 15vw 2vw 15vw;
+}
+
+#labelApp{
+  font-family: "Courier New", monospace;
+}
+
+.app-preview {
+  height: 50px;
+  width: 50px;
+  margin-right: 2vw;
+}
+
+#version {
+  width: 10vw;
+  height: 2vw;
+  border-radius: 5px;
+  border: black solid 1px;
+  background-color: white;
+  text-align: center;
+  font-size: 1vw;
+  align-content: center;
+  padding-top: 3px;
+}
+
+#label-poster-right {
+  padding: 1vw 0;
+  width: 20%;
+}
+
+#label-poster-right > button {
+  height: 2vw;
+}

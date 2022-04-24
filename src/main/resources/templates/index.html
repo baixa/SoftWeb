@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/home-css/home.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home/home.css}">
     <script th:src="@{/js/home.js}"></script>
 </head>
 <body>
@@ -54,7 +54,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp1.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp1.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp1.getId()})}" class="app-label" th:text="*{featuredApp1.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp1.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp1.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -62,7 +62,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp2.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp2.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp2.getId()})}" class="app-label" th:text="*{featuredApp2.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp2.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp2.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -70,7 +70,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp3.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp3.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp3.getId()})}" class="app-label" th:text="*{featuredApp3.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp3.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp3.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -81,7 +81,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp4.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp4.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp4.getId()})}" class="app-label" th:text="*{featuredApp4.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp4.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp4.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -89,7 +89,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp5.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp5.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp5.getId()})}" class="app-label" th:text="*{featuredApp5.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp5.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp5.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -97,7 +97,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp6.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp6.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp6.getId()})}" class="app-label" th:text="*{featuredApp6.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp6.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp6.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -108,7 +108,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp7.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp7.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp7.getId()})}" class="app-label" th:text="*{featuredApp7.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp7.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp7.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -116,7 +116,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp8.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp8.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp8.getId()})}" class="app-label" th:text="*{featuredApp8.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp8.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp8.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -124,7 +124,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp9.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp9.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp9.getId()})}" class="app-label" th:text="*{featuredApp9.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp9.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp9.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -135,7 +135,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp10.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp10.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp10.getId()})}" class="app-label" th:text="*{featuredApp10.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp10.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp10.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -143,7 +143,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp11.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp11.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp11.getId()})}" class="app-label" th:text="*{featuredApp11.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp11.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp11.getShortDescription()}">Music for everyone</h2>
                     </div>
@@ -151,7 +151,7 @@
                 <div class="app-block">
                     <img class="app-preview" th:src="*{featuredApp12.logoPath}">
                     <div class="block-right">
-                        <a href="#" class="app-label" th:text="*{featuredApp12.name}">Spotify</a>
+                        <a th:href="@{/application(id=${featuredApp12.getId()})}" class="app-label" th:text="*{featuredApp12.name}">Spotify</a>
                         <h2 class="app-developer" th:text="*{featuredApp12.getDeveloper().getUsername()}">Spotify</h2>
                         <h2 class="app-description" th:text="*{featuredApp12.getShortDescription()}">Music for everyone</h2>
                     </div>
