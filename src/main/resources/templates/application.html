@@ -66,6 +66,32 @@
         </div>
     </div>
 
+    <div id="description-poster" class="d-flex flex-row justify-content-between">
+        <div id="desc-left" class="d-flex flex-column align-content-between">
+            <h1 class="label-large" th:text="${app.getShortDescription()}"></h1>
+            <p class="description-large" th:text="${app.getDescription()}"></p>
+        </div>
+        <div id="desc-right" class="d-flex flex-column align-content-between">
+            <h3 class="label-details">Details</h3>
+            <h4 class="label-medium">License</h4>
+            <p class="description" th:text="${app.getLicense()}"></p>
+            <h4 class="label-medium">Last updated</h4>
+            <p class="description" th:text="${app.getLastUpdate()}"></p>
+            <h3 class="label-details">Share app</h3>
+            <div class="d-flex flex-row justify-content-between" style="width: 11.5vw;">
+                <div style="margin-right: 2vw;">
+                    <a href="#!"><img th:src="@{/images/facebook.png}" style="width: 100%"></a>
+                </div>
+                <div style="margin-right: 2vw;">
+                    <a href="#!"><img th:src="@{/images/instagram.png}" style="width: 100%"></a>
+                </div>
+                <div style="margin-right: 2vw;">
+                    <a href="#!"><img th:src="@{/images/twitter.png}" style="width: 100%"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <footer class="bg-dark text-center text-white">

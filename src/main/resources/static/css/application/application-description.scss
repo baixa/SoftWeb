@@ -1,0 +1,40 @@
+@import "../config/bootstrap-config";
+
+#description-poster {
+  background-color: #fff;
+  padding: 2vw 15vw 3vw 15vw;
+}
+
+#desc-left {
+  width: 40vw;
+}
+
+#desc-right {
+  width: 20vw;
+}
+
+.label-large {
+  font-family: "Courier New", monospace;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.description-large {
+  font-size: 1vw;
+  font-family: "Roboto";
+}
+
+.label-details {
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+.label-medium {
+  margin-top: 1vw;
+  font-size: 1vw;
+  font-weight: bolder;
+}
+
+.description {
+  margin-left: 1vw;
+}
