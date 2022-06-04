@@ -48,20 +48,20 @@
             </div>
         </div>
     	<div class="d-flex flex-row justify-content-between" id="label-poster-right">
-            <p class="d-flex flex-row justify-content-center" id="version">latest/stable: <span th:text="*{app.getApplicationsSystems().get(0).getVersion()}">4.3.1</span></p>
-            <a id="load-button" th:href="*{app.getApplicationsSystems().get(0).getInstallerPath()}"><button class="btn btn-outline-success" type="submit">Download</button></a>
+            <p class="d-flex flex-row justify-content-center" id="version">latest/stable: <span th:text="*{systems.get(0).getVersion()}">4.3.1</span></p>
+            <a id="load-button" th:href="*{systems.get(0).getInstallerPath()}"><button class="btn btn-outline-success" type="submit">Download</button></a>
     	</div>
     </div>
     <div>
         <div class="containerX">
             <div class="boxX">
-                <img th:src="*{app.getImages().get(0).getPath()}">
+                <img th:src="*{appImages.get(0).getPath()}">
             </div>
             <div class="boxX">
-                <img th:src="*{app.getImages().get(1).getPath()}">
+                <img th:src="*{appImages.get(1).getPath()}">
             </div>
             <div class="boxX">
-                <img th:src="*{app.getImages().get(2).getPath()}">
+                <img th:src="*{appImages.get(2).getPath()}">
             </div>
         </div>
     </div>
@@ -74,9 +74,9 @@
         <div id="desc-right" class="d-flex flex-column align-content-between">
             <h3 class="label-details">Details</h3>
             <h4 class="label-medium">License</h4>
-            <p class="description" th:text="${app.getLicense()}"></p>
+            <p class="description" th:text="${app.getLicense().getName()}"></p>
             <h4 class="label-medium">Last updated</h4>
-            <p class="description" th:text="${app.getLastUpdate()}"></p>
+            <p class="description" th:text="${dateUpdate}"></p>
             <h3 class="label-details">Share app</h3>
             <div class="d-flex flex-row justify-content-between" style="width: 11.5vw;">
                 <div style="margin-right: 2vw;">

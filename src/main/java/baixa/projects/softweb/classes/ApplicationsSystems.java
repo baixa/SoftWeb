@@ -1,16 +1,18 @@
 package baixa.projects.softweb.classes;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "applications_systems")
 @AllArgsConstructor
-@NoArgsConstructor
-@Data
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class ApplicationsSystems {
     @EmbeddedId
     private ApplicationsSystemsKey id;
@@ -30,4 +32,14 @@ public class ApplicationsSystems {
 
     @Column(name = "Version")
     private String version;
+
+    @Override
+    public String toString() {
+        return "ApplicationsSystems{" +
+                "id=" + id +
+                ", system=" + system +
+                ", installerPath='" + installerPath + '\'' +
+                ", version='" + version + '\'' +
+                '}';
+    }
 }

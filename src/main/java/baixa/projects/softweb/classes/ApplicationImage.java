@@ -1,11 +1,15 @@
 package baixa.projects.softweb.classes;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
-@Data
+@Getter
+@Setter
+@RequiredArgsConstructor
 @Entity
 @Table(name = "applications_images")
 @AllArgsConstructor
@@ -19,7 +23,11 @@ public class ApplicationImage {
     @JoinColumn(name = "Application_ID", nullable = false)
     private Application application;
 
-    public ApplicationImage() {
-
+    @Override
+    public String toString() {
+        return "ApplicationImage{" +
+                "path='" + path + '\'' +
+                ", application=" + application +
+                '}';
     }
 }

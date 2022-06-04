@@ -16,15 +16,15 @@
 }
 
 #version {
-  min-width: 10vw;
-  height: 2vw;
+  min-width: 150px;
+  min-height: 39px;
   border-radius: 5px;
   border: black solid 1px;
   background-color: white;
   text-align: center;
-  font-size: 1vw;
+  font-size: 17px;
   align-content: center;
-  padding-top: 3px;
+  padding-top: 5px;
 }
 
 #label-poster-right {
@@ -34,8 +34,16 @@
 
 #label-poster-right > button {
   height: 2vw;
+  margin-right: 3vw;
 }
 
-#label-poster-left {
+@media (max-width: 1000px) {
+  #label-poster {
+    padding: 1vw 1vw 2vw 1vw;
+  }
 
+  #label-poster-right {
+    padding: 1vw 0;
+    width: 50%;
+  }
 }

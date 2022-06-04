@@ -1,16 +1,21 @@
 package baixa.projects.softweb.classes;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
-@Data
+@Getter
+@Setter
+@RequiredArgsConstructor
 @Entity
 @Table(name = "developers")
 @AllArgsConstructor
+@Transactional
 public class Developer {
 
     @Id
@@ -30,10 +35,17 @@ public class Developer {
     @Column(name = "is_Admin")
     private boolean isAdmin;
 
-    @OneToMany(mappedBy = "developer")
-    private List<Application> applications = new ArrayList<>();
+    @OneToMany(mappedBy = "developer", fetch = FetchType.EAGER)
+    private Set<Application> applications;
 
-    public Developer() {
-
+    @Override
+    public String toString() {
+        return "Developer{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", password='" + password + '\'' +
+                ", isAdmin=" + isAdmin +
+                '}';
     }
 }

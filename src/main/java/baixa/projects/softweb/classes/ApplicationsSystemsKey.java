@@ -1,14 +1,19 @@
 package baixa.projects.softweb.classes;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.io.Serializable;
+import java.util.Objects;
 
 @Embeddable
-@Data
+@Getter
+@Setter
+@RequiredArgsConstructor
 @AllArgsConstructor
 public class ApplicationsSystemsKey implements Serializable {
     @Column(name="application_id")
@@ -17,7 +22,24 @@ public class ApplicationsSystemsKey implements Serializable {
     @Column(name = "system_id")
     private Long systemId;
 
-    public ApplicationsSystemsKey() {
+    @Override
+    public String toString() {
+        return "ApplicationsSystemsKey{" +
+                "applicationId=" + applicationId +
+                ", systemId=" + systemId +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ApplicationsSystemsKey that = (ApplicationsSystemsKey) o;
+        return applicationId.equals(that.applicationId) && systemId.equals(that.systemId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(applicationId, systemId);
     }
 }

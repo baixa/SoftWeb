@@ -12,23 +12,23 @@ import java.util.Set;
 @Setter
 @RequiredArgsConstructor
 @Entity
-@Table(name = "operation_systems")
+@Table(name = "license")
 @AllArgsConstructor
-public class OperationSystem {
+public class License {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @Column(name = "code")
+    private String code;
 
     @Column(name = "Name")
     private String name;
 
-    @OneToMany(mappedBy = "system", fetch = FetchType.EAGER)
-    private Set<ApplicationsSystems> applicationsSystems;
+    @OneToMany(mappedBy = "license", fetch = FetchType.EAGER)
+    private Set<Application> applications;
 
     @Override
     public String toString() {
-        return "OperationSystem{" +
-                "id=" + id +
+        return "License{" +
+                "code='" + code + '\'' +
                 ", name='" + name + '\'' +
                 '}';
     }
